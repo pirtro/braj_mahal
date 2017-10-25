@@ -5,6 +5,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
     event.preventDefault();
 
     const { email, subject, message } = form.elements;
-    window.open(`mailto:${email.value}?subject=${subject.value}&body=${message.value}`);    
+    axios.post("192.142.23.2/contactform", {
+        email: email
+        
+    })   
   });
 });
